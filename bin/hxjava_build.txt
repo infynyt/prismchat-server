@@ -390,6 +390,7 @@ M java.lang.annotation.Annotation
 M java.io.DataInput
 M java.util.function.DoublePredicate
 M java.net.ProtocolFamily
+M haxe.root.ChatRequest
 M java.time.temporal.TemporalAccessor
 M java.nio.channels.spi.AbstractSelectionKey
 M java.util.function.LongToDoubleFunction
