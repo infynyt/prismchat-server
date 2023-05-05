@@ -110,6 +110,8 @@ M java.security.AccessControlException
 M java.nio.channels.SelectionKey
 M java.util.concurrent.atomic.AtomicInteger
 M java.util.Collections
+M haxe.crypto.Base64
+C haxe.crypto.Base64
 M haxe.root.Array
 C haxe.root.Array
 M java.io.FileNotFoundException
@@ -162,6 +164,8 @@ M java.lang.reflect.AccessibleObject
 M java.util.function.LongPredicate
 M java.nio.channels.ByteChannel
 M java.lang.Readable
+M haxe.format.JsonParser
+C haxe.format.JsonParser
 M java.lang.reflect.InvocationTargetException
 M java.time.temporal.TemporalQuery
 M haxe.exceptions.PosException
@@ -266,6 +270,8 @@ M java.lang.Iterable
 M java.net.ContentHandler
 M java.net.Proxy
 M java.util.MissingResourceException
+M haxe.root.StringTools
+C haxe.root.StringTools
 M java.io.PrintWriter
 M haxe.Int64
 M java.util.stream.LongStream
@@ -337,6 +343,8 @@ M java.nio.channels.AsynchronousChannel
 M java.util.regex.Pattern
 M java.util.Date
 M haxe.ds.ObjectMap
+M haxe.crypto.BaseCode
+C haxe.crypto.BaseCode
 M java.nio.ByteBuffer
 M java.nio.file.FileSystem
 M java.time.OffsetDateTime
@@ -500,7 +508,7 @@ M java.util.function.LongSupplier
 M java.lang.Exception
 M haxe.root.Main
 C haxe.root.Main
-C haxe.root.Main_main_11__Fun
+C haxe.root.Main_main_16__Fun
 M java.lang.System
 M java.nio.channels.AsynchronousFileChannel
 M java.util.OptionalDouble

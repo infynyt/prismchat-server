@@ -47,6 +47,22 @@ public class StringBuf extends haxe.lang.HxObject
 	}
 	
 	
+	public void addSub(java.lang.String s, int pos, java.lang.Object len)
+	{
+		//line 47 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+		int l = ( (haxe.lang.Runtime.eq(len, null)) ? (( s.length() - pos )) : (((int) (haxe.lang.Runtime.toInt(len)) )) );
+		//line 48 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+		java.lang.StringBuilder __temp_expr1 = ((java.lang.StringBuilder) (this.b.append(((java.lang.CharSequence) (s) ), ((int) (pos) ), ((int) (( pos + l )) ))) );
+	}
+	
+	
+	public void addChar(int c)
+	{
+		//line 53 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+		java.lang.StringBuilder __temp_expr1 = ((java.lang.StringBuilder) (this.b.appendCodePoint(((int) (c) ))) );
+	}
+	
+	
 	@Override public java.lang.String toString()
 	{
 		//line 57 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
@@ -149,6 +165,22 @@ public class StringBuf extends haxe.lang.HxObject
 					}
 					
 					
+					case -1149089897:
+					{
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						if (field.equals("addChar")) 
+						{
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							__temp_executeDef1 = false;
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "addChar")) );
+						}
+						
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						break;
+					}
+					
+					
 					case 96417:
 					{
 						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
@@ -158,6 +190,22 @@ public class StringBuf extends haxe.lang.HxObject
 							__temp_executeDef1 = false;
 							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
 							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "add")) );
+						}
+						
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						break;
+					}
+					
+					
+					case -1422524961:
+					{
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						if (field.equals("addSub")) 
+						{
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							__temp_executeDef1 = false;
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							return ((haxe.lang.Function) (new haxe.lang.Closure(this, "addSub")) );
 						}
 						
 						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
@@ -232,6 +280,38 @@ public class StringBuf extends haxe.lang.HxObject
 					}
 					
 					
+					case -1149089897:
+					{
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						if (field.equals("addChar")) 
+						{
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							__temp_executeDef1 = false;
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							this.addChar(((int) (haxe.lang.Runtime.toInt(dynargs[0])) ));
+						}
+						
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						break;
+					}
+					
+					
+					case -1422524961:
+					{
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						if (field.equals("addSub")) 
+						{
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							__temp_executeDef1 = false;
+							//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+							this.addSub(haxe.lang.Runtime.toString(dynargs[0]), ((int) (haxe.lang.Runtime.toInt(dynargs[1])) ), ( (( dynargs.length > 2 )) ? (dynargs[2]) : (null) ));
+						}
+						
+						//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+						break;
+					}
+					
+					
 				}
 				
 			}
@@ -242,14 +322,11 @@ public class StringBuf extends haxe.lang.HxObject
 				//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
-			else
-			{
-				//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
-				throw null;
-			}
 			
 		}
 		
+		//line 23 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
+		return null;
 	}
 	
 	

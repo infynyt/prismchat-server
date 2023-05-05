@@ -24,7 +24,7 @@ public class Main extends haxe.lang.HxObject
 	
 	public Main()
 	{
-		//line 6 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 11 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
 		haxe.root.Main.__hx_ctor__Main(this);
 	}
 	
@@ -38,10 +38,10 @@ public class Main extends haxe.lang.HxObject
 	
 	public static void main()
 	{
-		//line 10 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 15 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
 		haxe.root.Main.Server = new hx_webserver.HTTPServer(haxe.lang.Runtime.toString("0.0.0.0"), ((int) (haxe.root.Reference.SERVER_PORT) ), ((java.lang.Object) (true) ));
-		//line 11 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
-		haxe.root.Main.Server.onClientConnect = ( (( haxe.root.Main_main_11__Fun.__hx_current != null )) ? (haxe.root.Main_main_11__Fun.__hx_current) : (haxe.root.Main_main_11__Fun.__hx_current = ((haxe.root.Main_main_11__Fun) (new haxe.root.Main_main_11__Fun()) )) );
+		//line 16 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		haxe.root.Main.Server.onClientConnect = ( (( haxe.root.Main_main_16__Fun.__hx_current != null )) ? (haxe.root.Main_main_16__Fun.__hx_current) : (haxe.root.Main_main_16__Fun.__hx_current = ((haxe.root.Main_main_16__Fun) (new haxe.root.Main_main_16__Fun()) )) );
 	}
 	
 	

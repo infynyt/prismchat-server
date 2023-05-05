@@ -1,5 +1,10 @@
 package;
 
+import haxe.io.BytesData;
+import haxe.io.Bytes;
+import haxe.crypto.Crc32;
+import haxe.crypto.Base64;
+import haxe.Json;
 import hx_webserver.HTTPRequest;
 import hx_webserver.HTTPServer;
 
@@ -9,8 +14,9 @@ class Main {
 	static function main() {
 		Server = new HTTPServer("0.0.0.0", Reference.SERVER_PORT, true);
 		Server.onClientConnect = (d:HTTPRequest) -> {
-			trace(d.postData);
-			d.reply("hi");
+			trace(Json.parse(Base64.decode(d.postData.substring(2, d.postData.length)).toString()));
+
+			d.close();
 		}
 	}
 }

@@ -135,6 +135,415 @@ public class Std
 	}
 	
 	
+	public static java.lang.Object parseInt(java.lang.String x)
+	{
+		//line 66 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		try 
+		{
+			//line 67 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			if (( x == null )) 
+			{
+				//line 68 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				return null;
+			}
+			
+			//line 70 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int base = 10;
+			//line 71 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int len = x.length();
+			//line 72 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int foundCount = 0;
+			//line 73 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int sign = 0;
+			//line 74 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int firstDigitIndex = 0;
+			//line 75 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int lastDigitIndex = -1;
+			//line 76 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int previous = 0;
+			//line 78 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			{
+				//line 78 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				int _g = 0;
+				//line 78 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				int _g1 = len;
+				//line 78 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				label1:
+				while (( _g < _g1 ))
+				{
+					//line 78 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					int i = _g++;
+					//line 79 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					int c = ( (( i < x.length() )) ? (((int) (((java.lang.String) (((java.lang.Object) (x) )) ).charAt(i)) )) : (-1) );
+					//line 80 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					if (( ( ( c > 8 ) && ( c < 14 ) ) || ( c == 32 ) )) 
+					{
+						//line 82 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						if (( foundCount > 0 )) 
+						{
+							//line 83 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							return null;
+						}
+						
+						//line 85 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						continue;
+					}
+					else
+					{
+						//line 80 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						switch (c)
+						{
+							case 43:
+							{
+								//line 88 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								if (( foundCount == 0 )) 
+								{
+									//line 89 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									sign = 1;
+								}
+								else
+								{
+									//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									if ( ! ((( ( 48 <= c ) && ( c <= 57 ) ))) ) 
+									{
+										//line 94 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+										if ( ! ((( ( base == 16 ) && (( ( ( 97 <= c ) && ( c <= 122 ) ) || ( ( 65 <= c ) && ( c <= 90 ) ) )) ))) ) 
+										{
+											//line 96 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+											break label1;
+										}
+										
+									}
+									
+								}
+								
+								//line 88 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break;
+							}
+							
+							
+							case 45:
+							{
+								//line 86 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								if (( foundCount == 0 )) 
+								{
+									//line 87 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									sign = -1;
+								}
+								else
+								{
+									//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									if ( ! ((( ( 48 <= c ) && ( c <= 57 ) ))) ) 
+									{
+										//line 94 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+										if ( ! ((( ( base == 16 ) && (( ( ( 97 <= c ) && ( c <= 122 ) ) || ( ( 65 <= c ) && ( c <= 90 ) ) )) ))) ) 
+										{
+											//line 96 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+											break label1;
+										}
+										
+									}
+									
+								}
+								
+								//line 86 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break;
+							}
+							
+							
+							case 48:
+							{
+								//line 90 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								if ( ! ((( ( foundCount == 0 ) || ( ( foundCount == 1 ) && ( sign != 0 ) ) ))) ) 
+								{
+									//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									if ( ! ((( ( 48 <= c ) && ( c <= 57 ) ))) ) 
+									{
+										//line 94 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+										if ( ! ((( ( base == 16 ) && (( ( ( 97 <= c ) && ( c <= 122 ) ) || ( ( 65 <= c ) && ( c <= 90 ) ) )) ))) ) 
+										{
+											//line 96 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+											break label1;
+										}
+										
+									}
+									
+								}
+								
+								//line 90 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break;
+							}
+							
+							
+							case 88:
+							case 120:
+							{
+								//line 91 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								if (( ( previous == 48 ) && (( ( ( foundCount == 1 ) && ( sign == 0 ) ) || ( ( foundCount == 2 ) && ( sign != 0 ) ) )) )) 
+								{
+									//line 92 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									base = 16;
+								}
+								else
+								{
+									//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									if ( ! ((( ( 48 <= c ) && ( c <= 57 ) ))) ) 
+									{
+										//line 94 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+										if ( ! ((( ( base == 16 ) && (( ( ( 97 <= c ) && ( c <= 122 ) ) || ( ( 65 <= c ) && ( c <= 90 ) ) )) ))) ) 
+										{
+											//line 96 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+											break label1;
+										}
+										
+									}
+									
+								}
+								
+								//line 91 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break;
+							}
+							
+							
+							default:
+							{
+								//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								if ( ! ((( ( 48 <= c ) && ( c <= 57 ) ))) ) 
+								{
+									//line 94 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+									if ( ! ((( ( base == 16 ) && (( ( ( 97 <= c ) && ( c <= 122 ) ) || ( ( 65 <= c ) && ( c <= 90 ) ) )) ))) ) 
+									{
+										//line 96 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+										break label1;
+									}
+									
+								}
+								
+								//line 93 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break;
+							}
+							
+						}
+						
+					}
+					
+					//line 98 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					if (( ( ( foundCount == 0 ) && ( sign == 0 ) ) || ( ( foundCount == 1 ) && ( sign != 0 ) ) )) 
+					{
+						//line 99 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						firstDigitIndex = i;
+					}
+					
+					//line 101 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					 ++ foundCount;
+					//line 102 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					lastDigitIndex = i;
+					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					previous = c;
+				}
+				;
+			}
+			
+			//line 105 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			if (( firstDigitIndex <= lastDigitIndex )) 
+			{
+				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				java.lang.String digits = haxe.lang.StringExt.substring(x, ( firstDigitIndex + (( (( base == 16 )) ? (2) : (0) )) ), ( lastDigitIndex + 1 ));
+				//line 108 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				try 
+				{
+					//line 108 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					return ( (( (( sign == -1 )) ? (-1) : (1) )) * java.lang.Integer.parseInt(haxe.lang.Runtime.toString(digits), ((int) (base) )) );
+				}
+				catch (java.lang.NumberFormatException e)
+				{
+					//line 110 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					return null;
+				}
+				
+				
+			}
+			
+			//line 113 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			return null;
+		}
+		catch (java.lang.Throwable typedException)
+		{
+			//line 66 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			throw ((java.lang.RuntimeException) (haxe.Exception.thrown(typedException)) );
+		}
+		
+		
+	}
+	
+	
+	public static double parseFloat(java.lang.String x)
+	{
+		//line 117 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		if (( x == null )) 
+		{
+			//line 118 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			return java.lang.Double.NaN;
+		}
+		
+		//line 119 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		x = haxe.root.StringTools.ltrim(x);
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean found = false;
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean hasDot = false;
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean hasSign = false;
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean hasE = false;
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean hasESign = false;
+		//line 120 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		boolean hasEData = false;
+		//line 126 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		int i = -1;
+		//line 130 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		label1:
+		while ((  ++ i < x.length() ))
+		{
+			//line 131 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			int chr = ((int) (x.charAt(i)) );
+			//line 132 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			if (( ( chr >= 48 ) && ( chr <= 57 ) )) 
+			{
+				//line 133 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				if (hasE) 
+				{
+					//line 134 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+					hasEData = true;
+				}
+				
+				//line 136 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				found = true;
+			}
+			else
+			{
+				//line 138 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				switch (chr)
+				{
+					case 43:
+					case 45:
+					{
+						//line 143 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						if ((  ! (found)  &&  ! (hasSign)  )) 
+						{
+							//line 144 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							hasSign = true;
+						}
+						else
+						{
+							//line 145 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							if (( ( ( found &&  ! (hasESign)  ) && hasE ) &&  ! (hasEData)  )) 
+							{
+								//line 146 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								hasESign = true;
+							}
+							else
+							{
+								//line 148 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+								break label1;
+							}
+							
+						}
+						
+						//line 143 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						break;
+					}
+					
+					
+					case 46:
+					{
+						//line 141 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						if ( ! (hasDot) ) 
+						{
+							//line 142 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							hasDot = true;
+						}
+						else
+						{
+							//line 148 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							break label1;
+						}
+						
+						//line 141 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						break;
+					}
+					
+					
+					case 69:
+					case 101:
+					{
+						//line 139 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						if ( ! (hasE) ) 
+						{
+							//line 140 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							hasE = true;
+						}
+						else
+						{
+							//line 148 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+							break label1;
+						}
+						
+						//line 139 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						break;
+					}
+					
+					
+					default:
+					{
+						//line 148 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+						break label1;
+					}
+					
+				}
+				
+			}
+			
+		}
+		;
+		//line 151 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		if (( hasE &&  ! (hasEData)  )) 
+		{
+			//line 152 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			 -- i;
+			//line 153 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			if (hasESign) 
+			{
+				//line 154 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+				 -- i;
+			}
+			
+		}
+		
+		//line 157 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		if (( i != x.length() )) 
+		{
+			//line 158 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			x = haxe.lang.StringExt.substr(x, 0, i);
+		}
+		
+		//line 160 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+		try 
+		{
+			//line 160 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			return java.lang.Double.parseDouble(haxe.lang.Runtime.toString(x));
+		}
+		catch (java.lang.Throwable _g)
+		{
+			//line 160 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Std.hx"
+			return java.lang.Double.NaN;
+		}
+		
+		
+	}
+	
+	
 }
 
 
