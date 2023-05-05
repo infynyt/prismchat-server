@@ -1,0 +1,5 @@
+-lib hxjava 
+-lib hx_webserver
+-cp src
+-main Main 
+--java bin
