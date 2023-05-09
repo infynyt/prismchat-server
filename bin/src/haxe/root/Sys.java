@@ -22,6 +22,13 @@ public class Sys extends haxe.lang.HxObject
 	}
 	
 	
+	public static java.lang.String getCwd()
+	{
+		//line 79 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"
+		return haxe.lang.StringExt.substr(new java.io.File(haxe.lang.Runtime.toString(".")).getAbsolutePath(), 0, -1);
+	}
+	
+	
 	public static double time()
 	{
 		//line 132 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"

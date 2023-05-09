@@ -12,6 +12,7 @@ class Main {
 	static var Server:HTTPServer;
 
 	static function main() {
+		Database.make();
 		Server = new HTTPServer("0.0.0.0", Reference.SERVER_PORT, true);
 		Server.onClientConnect = (d:HTTPRequest) -> {
 			final data:ChatRequest = Json.parse(Base64.decode(d.postData.substring(2, d.postData.length)).toString());
@@ -31,8 +32,6 @@ class Main {
 								d.reply("DANGER: DO NOT USE UNHASHED PASSWORDS!", 400);
 						}
 					}
-					trace(username);
-					trace(password);
 			}
 
 			d.close();

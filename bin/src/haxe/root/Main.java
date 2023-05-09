@@ -39,9 +39,11 @@ public class Main extends haxe.lang.HxObject
 	public static void main()
 	{
 		//line 15 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
-		haxe.root.Main.Server = new hx_webserver.HTTPServer(haxe.lang.Runtime.toString("0.0.0.0"), ((int) (haxe.root.Reference.SERVER_PORT) ), ((java.lang.Object) (true) ));
+		haxe.root.Database.make();
 		//line 16 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
-		haxe.root.Main.Server.onClientConnect = ( (( haxe.root.Main_main_16__Fun.__hx_current != null )) ? (haxe.root.Main_main_16__Fun.__hx_current) : (haxe.root.Main_main_16__Fun.__hx_current = ((haxe.root.Main_main_16__Fun) (new haxe.root.Main_main_16__Fun()) )) );
+		haxe.root.Main.Server = new hx_webserver.HTTPServer(haxe.lang.Runtime.toString("0.0.0.0"), ((int) (haxe.root.Reference.SERVER_PORT) ), ((java.lang.Object) (true) ));
+		//line 17 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		haxe.root.Main.Server.onClientConnect = ( (( haxe.root.Main_main_17__Fun.__hx_current != null )) ? (haxe.root.Main_main_17__Fun.__hx_current) : (haxe.root.Main_main_17__Fun.__hx_current = ((haxe.root.Main_main_17__Fun) (new haxe.root.Main_main_17__Fun()) )) );
 	}
 	
 	

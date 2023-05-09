@@ -69,6 +69,37 @@ public class StringTools extends haxe.lang.HxObject
 	}
 	
 	
+	public static java.lang.String lpad(java.lang.String s, java.lang.String c, int l)
+	{
+		//line 366 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		if (( c.length() <= 0 )) 
+		{
+			//line 367 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+			return s;
+		}
+		
+		//line 369 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		haxe.root.StringBuf buf = new haxe.root.StringBuf();
+		//line 370 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		l -= s.length();
+		//line 371 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		while (( buf.b.length() < l ))
+		{
+			//line 372 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+			buf.add(haxe.lang.Runtime.toString(c));
+			//line 372 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+			java.lang.Object __temp_expr1 = ((java.lang.Object) (null) );
+		}
+		
+		//line 374 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		buf.add(haxe.lang.Runtime.toString(s));
+		//line 374 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		java.lang.Object __temp_expr2 = ((java.lang.Object) (null) );
+		//line 375 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
+		return buf.toString();
+	}
+	
+	
 }
 
 

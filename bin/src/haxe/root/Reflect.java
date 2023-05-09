@@ -84,6 +84,13 @@ public class Reflect extends haxe.lang.HxObject
 	}
 	
 	
+	public static boolean isFunction(java.lang.Object f)
+	{
+		//line 95 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		return ( f instanceof haxe.lang.Function );
+	}
+	
+	
 }
 
 
