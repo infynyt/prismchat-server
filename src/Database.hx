@@ -11,6 +11,7 @@ import haxe.io.Path;
 class Database {
 	public static var DB_PATH:String = Path.join([Reference.WORKNG_DIR, "data/db1.json"]);
 	public static final DB_SCHEMA:DatabaseSchema = {
+		name: "Chat Room",
 		users: [],
 		messages: []
 	};
@@ -51,5 +52,7 @@ class Database {
 
 	public static function addUser() {}
 
-	public static function read() {}
+	public static function read():DatabaseSchema {
+		return Json.parse(File.getContent(DB_PATH));
+	}
 }
