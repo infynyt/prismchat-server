@@ -9,7 +9,7 @@ import sys.io.File;
 import haxe.io.Path;
 
 class Database {
-	public static var DB_PATH:String;
+	public static var DB_PATH:String = Path.join([Reference.WORKNG_DIR, "data/db1.json"]);
 	public static final DB_SCHEMA:DatabaseSchema = {
 		users: [],
 		messages: []
@@ -24,21 +24,9 @@ class Database {
 	 * 299 An unknown error occurred
 	 */
 	public static function check():Int {
-		if (DB_PATH == null && !FileSystem.exists(Path.join([Reference.WORKNG_DIR, "data/db1.json"])))
-			return 200;
-		else if (!FileSystem.exists(Path.join([Reference.WORKNG_DIR, "data/db1.json"])))
-			return 201;
-		else if (FileSystem.exists(Path.join([Reference.WORKNG_DIR, "data/db1.json"]))) {
-			try {
-				Json.parse(File.getContent(Path.join([Reference.WORKNG_DIR, "data/db1.json"])));
-			} catch (err:String) {
-				throw new Exception(err);
-				return 202;
-			}
-		} else if (FileSystem.exists(Path.join([Reference.WORKNG_DIR, "data/db1.json"]))) {
+		if (FileSystem.exists(Path.join([Reference.WORKNG_DIR, "data/db1.json"])))
 			return 100;
-		}
-		return 299;
+		return 201;
 	}
 
 	public static function make() {

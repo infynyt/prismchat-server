@@ -22,19 +22,6 @@ public class File extends haxe.lang.HxObject
 	}
 	
 	
-	public static java.lang.String getContent(java.lang.String path)
-	{
-		//line 28 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\sys\\io\\File.hx"
-		sys.io.FileInput f = sys.io.File.read(path, false);
-		//line 29 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\sys\\io\\File.hx"
-		java.lang.String ret = f.readAll(null).toString();
-		//line 30 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\sys\\io\\File.hx"
-		f.close();
-		//line 31 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\sys\\io\\File.hx"
-		return ret;
-	}
-	
-	
 	public static void saveContent(java.lang.String path, java.lang.String content)
 	{
 		//line 35 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\sys\\io\\File.hx"

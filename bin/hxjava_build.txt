@@ -233,9 +233,9 @@ M haxe.ds.HashMap
 M java.security.ProtectionDomain
 M java.nio.file.WatchEvent
 M java.util.SortedMap
+M java.lang.StringBuilder
 M haxe.format.JsonPrinter
 C haxe.format.JsonPrinter
-M java.lang.StringBuilder
 M java.lang.reflect.Type
 M java.security.CodeSource
 M java.util.function.ToIntFunction
