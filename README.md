@@ -26,3 +26,20 @@ You can choose to compile natively with C++ or with Java.
 
 Java: Install a Java Development Kit of your choice.
 C++/Windows: Install Microsoft Visual C++ compiler
+C++/MacOS & Linux: Install GNU GCC compiler
+
+### Step 3: Install haxe dependencies
+
+IMPORTANT NOTICE FOR LINUX USERS: In order to use haxelib, you will have to type `haxelib setup` to specify a directory to store downloaded packages.
+
+Run the following commands regardless if you are using C++ or Java:```
+haxelib install hxcpp
+haxelib install hxjava
+haxelib install hx_webserver
+haxelib install console.hx```
+
+### Step 4: Build and test the application
+
+Java:
+Run `haxe ./build.hxml` and `java -jar bin/java/Main.jar` in your terminal
+or just run `./test.sh` in your terminal
