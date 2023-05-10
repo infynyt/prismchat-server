@@ -1,5 +1,6 @@
 -lib hxcpp 
 -lib hx_webserver
+-lib crypto
 -cp src
 -main Main 
 --cpp bin/native

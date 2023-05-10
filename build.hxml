@@ -1,5 +1,6 @@
 -lib hxjava 
 -lib hx_webserver
+-lib crypto
 -cp src
 -main Main 
 --java bin/java

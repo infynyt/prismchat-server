@@ -1,5 +1,6 @@
 package;
 
+import haxe.io.Bytes;
 import haxe.Exception;
 import sys.FileSystem;
 import haxe.crypto.Crc32;
@@ -31,14 +32,13 @@ class Database {
 		}
 	}
 
-	public static function addMessage(sndr:String, msg:String, tstamp:Int) {
+	public static function addMessage(sndr:String, msg:String, tstamp:Int, hash:Int) {
 		var d = read();
-		final h = Crc32.make(sndr + msg + tstamp);
-		d.messsages.push({
+		d.messages.push({
 			sender: sndr,
 			message: msg,
 			timestamp: tstamp,
-			crc32: h
+			crc32: hash
 		});
 		overwrite(d);
 	}
@@ -47,13 +47,25 @@ class Database {
 		File.saveContent(DB_PATH, Json.stringify(data));
 	}
 
-	public static function addUser(user:String) {
+	public static function addUser(user:String, pwdhash:Int, tk:Int, tex:Int) {
 		var d = read();
 		d.users.push({
 			username: user,
-			passwordHash: "0"
+			passwordHash: pwdhash,
+			token: tk,
+			expiry: tex
 		});
 		overwrite(d);
+	}
+
+	public static function assignToken(user:String, t:{token:Int, expiry:Int}) {
+		var d = read();
+		for (i in 0...d.users.length) {
+			if (d.users[i].username == user) {
+				d.users[i].token = t.token;
+				d.users[i].expiry = t.expiry;
+			}
+		}
 	}
 
 	public static function removeUser(user:String) {

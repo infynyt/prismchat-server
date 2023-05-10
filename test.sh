@@ -1,2 +1,3 @@
 haxe build.hxml
-java -jar bin/Main.jar
+echo
+java -jar bin/java/Main.jar
