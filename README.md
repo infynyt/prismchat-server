@@ -43,3 +43,9 @@ haxelib install console.hx```
 Java:
 Run `haxe ./build.hxml` and `java -jar bin/java/Main.jar` in your terminal
 or just run `./test.sh` in your terminal
+
+C++:
+Run `haxe ./build-native`. There is no dedicated script for testing the C++ app.
+Windows: Run `.\bin\native\Main.exe`
+MacOS: (I do not use mac so this might not be correct. Please create a pull request if this doesn't work) Open `bin/native/Main.app` in Finder
+Linux: Run `./bin/native/Main`
