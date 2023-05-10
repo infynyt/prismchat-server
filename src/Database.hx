@@ -11,7 +11,7 @@ import haxe.io.Path;
 class Database {
 	public static var DB_PATH:String = Path.join([Reference.WORKNG_DIR, "data/db1.json"]);
 	public static final DB_SCHEMA:DatabaseSchema = {
-		name: "Chat Room",
+		name: "To edit your server name, edit the 'name' property in the 'data/db1.json' file",
 		users: [],
 		messages: []
 	};
@@ -31,7 +31,21 @@ class Database {
 		}
 	}
 
-	public static function addMessage(sender:String, message:String, timestamp:Int, crc32:Crc32) {}
+	public static function addMessage(sndr:String, msg:String, tstamp:Int) {
+		var d = read();
+		final h = Crc32.make(sndr + msg + tstamp);
+		d.messsages.push({
+			sender: sndr,
+			message: msg,
+			timestamp: tstamp,
+			crc32: h
+		});
+		overwrite(d);
+	}
+
+	public static function overwrite(data:DatabaseSchema) {
+		File.saveContent(DB_PATH, Json.stringify(data));
+	}
 
 	public static function addUser() {}
 
