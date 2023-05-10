@@ -47,7 +47,24 @@ class Database {
 		File.saveContent(DB_PATH, Json.stringify(data));
 	}
 
-	public static function addUser() {}
+	public static function addUser(user:String) {
+		var d = read();
+		d.users.push({
+			username: user,
+			passwordHash: "0"
+		});
+		overwrite(d);
+	}
+
+	public static function removeUser(user:String) {
+		var d = read();
+		for (v in d.users) {
+			if (v.username == user) {
+				// TODO
+			}
+		}
+		overwrite(d);
+	}
 
 	public static function read():DatabaseSchema {
 		return Json.parse(File.getContent(DB_PATH));
