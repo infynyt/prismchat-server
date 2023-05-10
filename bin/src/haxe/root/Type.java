@@ -12,7 +12,7 @@ public class Type extends haxe.lang.HxObject
 	
 	public Type()
 	{
-		//line 39 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 39 "/usr/share/haxe/std/java/_std/Type.hx"
 		haxe.root.Type.__hx_ctor__Type(this);
 	}
 	
@@ -24,28 +24,28 @@ public class Type extends haxe.lang.HxObject
 	
 	public static <T> java.lang.Class getClass(T o)
 	{
-		//line 41 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 41 "/usr/share/haxe/std/java/_std/Type.hx"
 		if (( ( ( o == null ) || haxe.root.Std.isOfType(o, haxe.lang.DynamicObject.class) ) || haxe.root.Std.isOfType(o, java.lang.Class.class) )) 
 		{
-			//line 42 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+			//line 42 "/usr/share/haxe/std/java/_std/Type.hx"
 			return null;
 		}
 		
-		//line 44 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 44 "/usr/share/haxe/std/java/_std/Type.hx"
 		return ((java.lang.Class) (((java.lang.Class) (((java.lang.Class) (o.getClass()) )) )) );
 	}
 	
 	
 	public static java.lang.Class getEnum(java.lang.Object o)
 	{
-		//line 48 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 48 "/usr/share/haxe/std/java/_std/Type.hx"
 		if (( ( o instanceof java.lang.Enum ) || ( o instanceof haxe.lang.Enum ) )) 
 		{
-			//line 49 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+			//line 49 "/usr/share/haxe/std/java/_std/Type.hx"
 			return o.getClass();
 		}
 		
-		//line 51 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 51 "/usr/share/haxe/std/java/_std/Type.hx"
 		return null;
 	}
 	

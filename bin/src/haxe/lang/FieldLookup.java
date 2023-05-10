@@ -12,7 +12,7 @@ public class FieldLookup extends haxe.lang.HxObject
 	
 	public FieldLookup()
 	{
-		//line 29 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 29 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		haxe.lang.FieldLookup.__hx_ctor_haxe_lang_FieldLookup(this);
 	}
 	
@@ -32,34 +32,34 @@ public class FieldLookup extends haxe.lang.HxObject
 	
 	public static int findHash(java.lang.String hash, java.lang.String[] hashs, int length)
 	{
-		//line 38 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 38 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		int min = 0;
-		//line 39 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 39 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		int max = length;
-		//line 41 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 41 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		while (( min < max ))
 		{
-			//line 42 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 42 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			int mid = ((int) (( ((double) ((( max + min ))) ) / 2 )) );
-			//line 43 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 43 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			int classify = hash.compareTo(hashs[mid]);
-			//line 44 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 44 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( classify < 0 )) 
 			{
-				//line 45 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 45 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				max = mid;
 			}
 			else
 			{
-				//line 46 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 46 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( classify > 0 )) 
 				{
-					//line 47 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 47 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					min = ( mid + 1 );
 				}
 				else
 				{
-					//line 49 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 49 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					return mid;
 				}
 				
@@ -67,100 +67,100 @@ public class FieldLookup extends haxe.lang.HxObject
 			
 		}
 		
-		//line 53 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 53 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		return  ~ (min) ;
 	}
 	
 	
 	public static void removeString(java.lang.String[] a, int length, int pos)
 	{
-		//line 57 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 57 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		java.lang.System.arraycopy(((java.lang.Object) (a) ), ((int) (( pos + 1 )) ), ((java.lang.Object) (a) ), ((int) (pos) ), ((int) (( ( length - pos ) - 1 )) ));
-		//line 58 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 58 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a[( length - 1 )] = null;
 	}
 	
 	
 	public static void removeFloat(double[] a, int length, int pos)
 	{
-		//line 62 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 62 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		java.lang.System.arraycopy(((java.lang.Object) (a) ), ((int) (( pos + 1 )) ), ((java.lang.Object) (a) ), ((int) (pos) ), ((int) (( ( length - pos ) - 1 )) ));
-		//line 63 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 63 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a[( length - 1 )] = ((double) (0) );
 	}
 	
 	
 	public static void removeDynamic(java.lang.Object[] a, int length, int pos)
 	{
-		//line 67 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 67 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		java.lang.System.arraycopy(((java.lang.Object) (a) ), ((int) (( pos + 1 )) ), ((java.lang.Object) (a) ), ((int) (pos) ), ((int) (( ( length - pos ) - 1 )) ));
-		//line 68 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 68 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a[( length - 1 )] = null;
 	}
 	
 	
 	public static java.lang.String[] insertString(java.lang.String[] a, int length, int pos, java.lang.String x)
 	{
-		//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		java.lang.String[] a1 = a;
-		//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		int capacity = a1.length;
-		//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		if (( pos == length )) 
 		{
-			//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( capacity == length )) 
 			{
-				//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				java.lang.String[] newarr = new java.lang.String[( (( length << 1 )) + 1 )];
-				//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr) ), ((int) (0) ), ((int) (a1.length) ));
-				//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				a1 = newarr;
 			}
 			
 		}
 		else
 		{
-			//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( pos == 0 )) 
 			{
-				//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.String[] newarr1 = new java.lang.String[( (( length << 1 )) + 1 )];
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr1) ), ((int) (1) ), ((int) (length) ));
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr1;
 				}
 				else
 				{
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (1) ), ((int) (length) ));
 				}
 				
 			}
 			else
 			{
-				//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.String[] newarr2 = new java.lang.String[( (( length << 1 )) + 1 )];
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr2) ), ((int) (0) ), ((int) (pos) ));
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (newarr2) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr2;
 				}
 				else
 				{
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (a1) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (0) ), ((int) (pos) ));
 				}
 				
@@ -168,75 +168,75 @@ public class FieldLookup extends haxe.lang.HxObject
 			
 		}
 		
-		//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a1[pos] = x;
-		//line 103 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 103 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		return a1;
 	}
 	
 	
 	public static double[] insertFloat(double[] a, int length, int pos, double x)
 	{
-		//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		double[] a1 = a;
-		//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		int capacity = a1.length;
-		//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		if (( pos == length )) 
 		{
-			//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( capacity == length )) 
 			{
-				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				double[] newarr = new double[( (( length << 1 )) + 1 )];
-				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr) ), ((int) (0) ), ((int) (a1.length) ));
-				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				a1 = newarr;
 			}
 			
 		}
 		else
 		{
-			//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( pos == 0 )) 
 			{
-				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					double[] newarr1 = new double[( (( length << 1 )) + 1 )];
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr1) ), ((int) (1) ), ((int) (length) ));
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr1;
 				}
 				else
 				{
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (1) ), ((int) (length) ));
 				}
 				
 			}
 			else
 			{
-				//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					double[] newarr2 = new double[( (( length << 1 )) + 1 )];
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr2) ), ((int) (0) ), ((int) (pos) ));
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (newarr2) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr2;
 				}
 				else
 				{
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (a1) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (0) ), ((int) (pos) ));
 				}
 				
@@ -244,75 +244,75 @@ public class FieldLookup extends haxe.lang.HxObject
 			
 		}
 		
-		//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a1[pos] = x;
-		//line 106 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 106 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		return a1;
 	}
 	
 	
 	public static java.lang.Object[] insertDynamic(java.lang.Object[] a, int length, int pos, java.lang.Object x)
 	{
-		//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		java.lang.Object[] a1 = a;
-		//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		int capacity = a1.length;
-		//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		if (( pos == length )) 
 		{
-			//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( capacity == length )) 
 			{
-				//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				java.lang.Object[] newarr = new java.lang.Object[( (( length << 1 )) + 1 )];
-				//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr) ), ((int) (0) ), ((int) (a1.length) ));
-				//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				a1 = newarr;
 			}
 			
 		}
 		else
 		{
-			//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+			//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 			if (( pos == 0 )) 
 			{
-				//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.Object[] newarr1 = new java.lang.Object[( (( length << 1 )) + 1 )];
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr1) ), ((int) (1) ), ((int) (length) ));
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr1;
 				}
 				else
 				{
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (1) ), ((int) (length) ));
 				}
 				
 			}
 			else
 			{
-				//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+				//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 				if (( capacity == length )) 
 				{
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.Object[] newarr2 = new java.lang.Object[( (( length << 1 )) + 1 )];
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (newarr2) ), ((int) (0) ), ((int) (pos) ));
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (newarr2) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					a1 = newarr2;
 				}
 				else
 				{
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (pos) ), ((java.lang.Object) (a1) ), ((int) (( pos + 1 )) ), ((int) (( length - pos )) ));
-					//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+					//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 					java.lang.System.arraycopy(((java.lang.Object) (a1) ), ((int) (0) ), ((java.lang.Object) (a1) ), ((int) (0) ), ((int) (pos) ));
 				}
 				
@@ -320,9 +320,9 @@ public class FieldLookup extends haxe.lang.HxObject
 			
 		}
 		
-		//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		a1[pos] = ((java.lang.Object) (x) );
-		//line 109 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\FieldLookup.hx"
+		//line 109 "/usr/share/haxe/std/java/internal/FieldLookup.hx"
 		return a1;
 	}
 	

@@ -165,7 +165,7 @@ public class StringExt
 	
 	public static java.lang.String toString(java.lang.String me)
 	{
-		//line 177 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\StringExt.hx"
+		//line 177 "/usr/share/haxe/std/java/internal/StringExt.hx"
 		return me;
 	}
 	
@@ -188,14 +188,14 @@ public class StringExt
 	
 	public static java.lang.String toNativeString(java.lang.String me)
 	{
-		//line 195 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\StringExt.hx"
+		//line 195 "/usr/share/haxe/std/java/internal/StringExt.hx"
 		return me;
 	}
 	
 	
 	public static java.lang.String fromCharCode(int code)
 	{
-		//line 199 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\StringExt.hx"
+		//line 199 "/usr/share/haxe/std/java/internal/StringExt.hx"
 		return new java.lang.String(((char[]) (java.lang.Character.toChars(((int) (code) ))) ));
 	}
 	

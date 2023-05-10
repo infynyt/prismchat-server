@@ -12,7 +12,7 @@ public class Init extends haxe.lang.HxObject
 	
 	public Init()
 	{
-		//line 24 "C:\\HaxeToolkit\\haxe\\std\\java\\Init.hx"
+		//line 24 "/usr/share/haxe/std/java/Init.hx"
 		haxe.java.Init.__hx_ctor_haxe_java_Init(this);
 	}
 	

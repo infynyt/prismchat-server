@@ -12,7 +12,7 @@ public class Reflect extends haxe.lang.HxObject
 	
 	public Reflect()
 	{
-		//line 28 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 28 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		haxe.root.Reflect.__hx_ctor__Reflect(this);
 	}
 	
@@ -24,29 +24,29 @@ public class Reflect extends haxe.lang.HxObject
 	
 	public static java.lang.Object field(java.lang.Object o, java.lang.String field)
 	{
-		//line 38 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 38 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		if (( o instanceof haxe.lang.IHxObject )) 
 		{
-			//line 39 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 39 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			return ((haxe.lang.IHxObject) (o) ).__hx_getField(field, false, false, false);
 		}
 		
-		//line 41 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 41 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		return haxe.lang.Runtime.slowGetField(o, field, false);
 	}
 	
 	
 	public static void setField(java.lang.Object o, java.lang.String field, java.lang.Object value)
 	{
-		//line 46 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 46 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		if (( o instanceof haxe.lang.IHxObject )) 
 		{
-			//line 47 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 47 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			((haxe.lang.IHxObject) (o) ).__hx_setField(field, value, false);
 		}
 		else
 		{
-			//line 49 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 49 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			haxe.lang.Runtime.slowSetField(o, field, value);
 		}
 		
@@ -55,27 +55,27 @@ public class Reflect extends haxe.lang.HxObject
 	
 	public static haxe.root.Array<java.lang.String> fields(java.lang.Object o)
 	{
-		//line 83 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 83 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		if (( o instanceof haxe.lang.IHxObject )) 
 		{
-			//line 84 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 84 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			haxe.root.Array<java.lang.String> ret = new haxe.root.Array<java.lang.String>(new java.lang.String[]{});
-			//line 85 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 85 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			((haxe.lang.IHxObject) (o) ).__hx_getFields(ret);
-			//line 86 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 86 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			return ret;
 		}
 		else
 		{
-			//line 87 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+			//line 87 "/usr/share/haxe/std/java/_std/Reflect.hx"
 			if (( o instanceof java.lang.Class )) 
 			{
-				//line 88 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+				//line 88 "/usr/share/haxe/std/java/_std/Reflect.hx"
 				return haxe.root.Type.getClassFields(((java.lang.Class) (o) ));
 			}
 			else
 			{
-				//line 90 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+				//line 90 "/usr/share/haxe/std/java/_std/Reflect.hx"
 				return new haxe.root.Array<java.lang.String>(new java.lang.String[]{});
 			}
 			
@@ -86,7 +86,7 @@ public class Reflect extends haxe.lang.HxObject
 	
 	public static boolean isFunction(java.lang.Object f)
 	{
-		//line 95 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Reflect.hx"
+		//line 95 "/usr/share/haxe/std/java/_std/Reflect.hx"
 		return ( f instanceof haxe.lang.Function );
 	}
 	

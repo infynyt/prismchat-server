@@ -12,7 +12,7 @@ public class Sys extends haxe.lang.HxObject
 	
 	public Sys()
 	{
-		//line 28 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"
+		//line 28 "/usr/share/haxe/std/java/_std/Sys.hx"
 		haxe.root.Sys.__hx_ctor__Sys(this);
 	}
 	
@@ -24,21 +24,21 @@ public class Sys extends haxe.lang.HxObject
 	
 	public static java.lang.String getCwd()
 	{
-		//line 79 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"
+		//line 79 "/usr/share/haxe/std/java/_std/Sys.hx"
 		return haxe.lang.StringExt.substr(new java.io.File(haxe.lang.Runtime.toString(".")).getAbsolutePath(), 0, -1);
 	}
 	
 	
 	public static double time()
 	{
-		//line 132 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"
+		//line 132 "/usr/share/haxe/std/java/_std/Sys.hx"
 		return ( ((double) (java.lang.System.currentTimeMillis()) ) / 1000 );
 	}
 	
 	
 	public static haxe.io.Output stderr()
 	{
-		//line 162 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Sys.hx"
+		//line 162 "/usr/share/haxe/std/java/_std/Sys.hx"
 		return new haxe.java.io.NativeOutput(((java.io.OutputStream) (java.lang.System.err) ));
 	}
 	

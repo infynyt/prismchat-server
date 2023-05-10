@@ -7,11 +7,11 @@ public class EntryPoint extends haxe.lang.HxObject
 {
 	static
 	{
-		//line 37 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 37 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.mutex = new haxe.java.vm.Mutex();
-		//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 39 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.mainThread = ((sys.thread._Thread.HaxeThread) (sys.thread._Thread.HaxeThread.get(java.lang.Thread.currentThread())) );
-		//line 45 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 45 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.threadCount = 0;
 	}
 	
@@ -22,7 +22,7 @@ public class EntryPoint extends haxe.lang.HxObject
 	
 	public EntryPoint()
 	{
-		//line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 35 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.__hx_ctor_haxe_EntryPoint(this);
 	}
 	
@@ -45,15 +45,15 @@ public class EntryPoint extends haxe.lang.HxObject
 	
 	public static void addThread(haxe.lang.Function f)
 	{
-		//line 73 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 73 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.mutex.acquire();
-		//line 74 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 74 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.threadCount++;
-		//line 75 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 75 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		haxe.EntryPoint.mutex.release();
-		//line 77 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 77 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		sys.thread._Thread.Thread_Impl_.get_events(haxe.EntryPoint.mainThread).promise();
-		//line 79 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
+		//line 79 "/usr/share/haxe/std/haxe/EntryPoint.hx"
 		sys.thread._Thread.HaxeThread.create(new haxe.EntryPoint_addThread_79__Fun(f), false);
 	}
 	

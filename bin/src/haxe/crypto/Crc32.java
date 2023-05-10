@@ -12,7 +12,7 @@ public class Crc32 extends haxe.lang.HxObject
 	
 	public Crc32()
 	{
-		//line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Crc32.hx"
+		//line 28 "/usr/share/haxe/std/haxe/crypto/Crc32.hx"
 		haxe.crypto.Crc32.__hx_ctor_haxe_crypto_Crc32(this);
 	}
 	

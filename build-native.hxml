@@ -1,5 +1,5 @@
--lib hxjava 
+-lib hxcpp 
 -lib hx_webserver
 -cp src
 -main Main 
---java bin/java
+--cpp bin/native

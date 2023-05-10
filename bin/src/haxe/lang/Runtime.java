@@ -34,7 +34,7 @@ public class Runtime
 	}
 	static
 	{
-		//line 60 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 60 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		haxe.lang.Runtime.undefined = ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{}, new java.lang.Object[]{}, new java.lang.String[]{}, new double[]{})) );
 	}
 	
@@ -114,15 +114,15 @@ public class Runtime
 	
 	public static boolean toBool(java.lang.Boolean obj)
 	{
-		//line 125 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 125 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( obj == null )) 
 		{
-			//line 125 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 125 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return false;
 		}
 		else
 		{
-			//line 125 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 125 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return obj.booleanValue();
 		}
 		
@@ -139,15 +139,15 @@ public class Runtime
 	
 	public static long toLong(java.lang.Object obj)
 	{
-		//line 136 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 136 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( obj == null )) 
 		{
-			//line 136 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 136 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return ((long) (0) );
 		}
 		else
 		{
-			//line 136 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 136 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return ((java.lang.Number) (obj) ).longValue();
 		}
 		
@@ -169,15 +169,15 @@ public class Runtime
 	
 	public static boolean isInt(java.lang.Number num)
 	{
-		//line 161 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 161 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num != null )) 
 		{
-			//line 161 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 161 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return ( num.doubleValue() == num.intValue() );
 		}
 		else
 		{
-			//line 161 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 161 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return false;
 		}
 		
@@ -186,17 +186,17 @@ public class Runtime
 	
 	public static boolean isInt(java.lang.Object obj)
 	{
-		//line 152 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 152 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( obj instanceof java.lang.Number )) 
 		{
-			//line 153 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 153 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			java.lang.Number n = ((java.lang.Number) (obj) );
-			//line 154 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 154 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return ( n.doubleValue() == n.intValue() );
 		}
 		else
 		{
-			//line 156 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 156 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return false;
 		}
 		
@@ -598,36 +598,36 @@ public class Runtime
 	
 	public static java.lang.String toString(java.lang.Object obj)
 	{
-		//line 547 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 547 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( obj == null )) 
 		{
-			//line 548 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 548 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		
-		//line 550 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 550 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( ( ( obj instanceof java.lang.Number ) &&  ! (( obj instanceof java.lang.Integer ))  ) && haxe.lang.Runtime.isInt(((java.lang.Number) (obj) )) )) 
 		{
-			//line 551 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 551 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return java.lang.Integer.toString(((int) (haxe.lang.Runtime.toInt(obj)) ));
 		}
 		
-		//line 552 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 552 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		return obj.toString();
 	}
 	
 	
 	public static boolean isFinite(double v)
 	{
-		//line 556 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 556 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( v == v )) 
 		{
-			//line 556 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 556 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return  ! (java.lang.Double.isInfinite(((double) (v) ))) ;
 		}
 		else
 		{
-			//line 556 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 556 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return false;
 		}
 		
@@ -636,15 +636,15 @@ public class Runtime
 	
 	public static int getIntFromNumber(java.lang.Number n)
 	{
-		//line 560 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 560 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( n == null )) 
 		{
-			//line 560 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 560 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return 0;
 		}
 		else
 		{
-			//line 560 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 560 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return n.intValue();
 		}
 		
@@ -653,15 +653,15 @@ public class Runtime
 	
 	public static double getFloatFromNumber(java.lang.Number n)
 	{
-		//line 564 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 564 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( n == null )) 
 		{
-			//line 564 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 564 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return 0.0;
 		}
 		else
 		{
-			//line 564 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 564 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return n.doubleValue();
 		}
 		
@@ -670,15 +670,15 @@ public class Runtime
 	
 	public static long getInt64FromNumber(java.lang.Number n)
 	{
-		//line 568 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 568 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( n == null )) 
 		{
-			//line 568 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 568 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return ((long) (0.0) );
 		}
 		else
 		{
-			//line 568 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 568 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return n.longValue();
 		}
 		
@@ -687,23 +687,23 @@ public class Runtime
 	
 	public static java.lang.Integer numToInteger(java.lang.Number num)
 	{
-		//line 572 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 572 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 572 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 572 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 572 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 572 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Integer.class)) 
 			{
-				//line 572 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 572 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Integer) (num) );
 			}
 			else
 			{
-				//line 572 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 572 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Integer.valueOf(((int) (num.intValue()) ));
 			}
 			
@@ -714,23 +714,23 @@ public class Runtime
 	
 	public static java.lang.Double numToDouble(java.lang.Number num)
 	{
-		//line 576 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 576 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 576 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 576 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 576 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 576 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Double.class)) 
 			{
-				//line 576 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 576 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Double) (num) );
 			}
 			else
 			{
-				//line 576 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 576 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Double.valueOf(((double) (num.doubleValue()) ));
 			}
 			
@@ -741,23 +741,23 @@ public class Runtime
 	
 	public static java.lang.Float numToFloat(java.lang.Number num)
 	{
-		//line 580 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 580 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 580 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 580 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 580 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 580 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Float.class)) 
 			{
-				//line 580 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 580 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Float) (num) );
 			}
 			else
 			{
-				//line 580 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 580 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Float.valueOf(((float) (num.floatValue()) ));
 			}
 			
@@ -768,23 +768,23 @@ public class Runtime
 	
 	public static java.lang.Byte numToByte(java.lang.Number num)
 	{
-		//line 584 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 584 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 584 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 584 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 584 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 584 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Byte.class)) 
 			{
-				//line 584 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 584 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Byte) (num) );
 			}
 			else
 			{
-				//line 584 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 584 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Byte.valueOf(((byte) (num.byteValue()) ));
 			}
 			
@@ -795,23 +795,23 @@ public class Runtime
 	
 	public static java.lang.Long numToLong(java.lang.Number num)
 	{
-		//line 588 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 588 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 588 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 588 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 588 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 588 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Long.class)) 
 			{
-				//line 588 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 588 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Long) (num) );
 			}
 			else
 			{
-				//line 588 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 588 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Long.valueOf(((long) (num.longValue()) ));
 			}
 			
@@ -822,23 +822,23 @@ public class Runtime
 	
 	public static java.lang.Short numToShort(java.lang.Number num)
 	{
-		//line 592 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+		//line 592 "/usr/share/haxe/std/java/internal/Runtime.hx"
 		if (( num == null )) 
 		{
-			//line 592 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 592 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			return null;
 		}
 		else
 		{
-			//line 592 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+			//line 592 "/usr/share/haxe/std/java/internal/Runtime.hx"
 			if (haxe.root.Std.isOfType(num, java.lang.Short.class)) 
 			{
-				//line 592 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 592 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return ((java.lang.Short) (num) );
 			}
 			else
 			{
-				//line 592 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\Runtime.hx"
+				//line 592 "/usr/share/haxe/std/java/internal/Runtime.hx"
 				return java.lang.Short.valueOf(((short) (num.shortValue()) ));
 			}
 			

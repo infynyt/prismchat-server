@@ -7,7 +7,7 @@ public class ValueType extends haxe.lang.ParamEnum
 {
 	public ValueType(int index, java.lang.Object[] params)
 	{
-		//line 240 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\HxObject.hx"
+		//line 240 "/usr/share/haxe/std/java/internal/HxObject.hx"
 		super(index, params);
 	}
 	
@@ -28,14 +28,14 @@ public class ValueType extends haxe.lang.ParamEnum
 	
 	public static haxe.root.ValueType TClass(java.lang.Class c)
 	{
-		//line 34 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 34 "/usr/share/haxe/std/java/_std/Type.hx"
 		return new haxe.root.ValueType(6, new java.lang.Object[]{c});
 	}
 	
 	
 	public static haxe.root.ValueType TEnum(java.lang.Class e)
 	{
-		//line 35 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 35 "/usr/share/haxe/std/java/_std/Type.hx"
 		return new haxe.root.ValueType(7, new java.lang.Object[]{e});
 	}
 	
@@ -44,7 +44,7 @@ public class ValueType extends haxe.lang.ParamEnum
 	
 	@Override public java.lang.String getTag()
 	{
-		//line 27 "C:\\HaxeToolkit\\haxe\\std\\java\\_std\\Type.hx"
+		//line 27 "/usr/share/haxe/std/java/_std/Type.hx"
 		return haxe.root.ValueType.__hx_constructs[this.index];
 	}
 	

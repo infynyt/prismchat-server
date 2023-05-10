@@ -7,9 +7,9 @@ public class Reference extends haxe.lang.HxObject
 {
 	static
 	{
-		//line 4 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Reference.hx"
+		//line 4 "/opt/hosting/prismchat-1/src/Reference.hx"
 		haxe.root.Reference.SERVER_PORT = 4897;
-		//line 5 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Reference.hx"
+		//line 5 "/opt/hosting/prismchat-1/src/Reference.hx"
 		haxe.root.Reference.WORKNG_DIR = haxe.root.Sys.getCwd();
 	}
 	
@@ -20,7 +20,7 @@ public class Reference extends haxe.lang.HxObject
 	
 	public Reference()
 	{
-		//line 3 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Reference.hx"
+		//line 3 "/opt/hosting/prismchat-1/src/Reference.hx"
 		haxe.root.Reference.__hx_ctor__Reference(this);
 	}
 	

@@ -7,7 +7,7 @@ public class Log extends haxe.lang.HxObject
 {
 	static
 	{
-		//line 62 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 62 "/usr/share/haxe/std/haxe/Log.hx"
 		haxe.Log.trace = ( (( haxe.Log_Anon_62__Fun.__hx_current != null )) ? (haxe.Log_Anon_62__Fun.__hx_current) : (haxe.Log_Anon_62__Fun.__hx_current = ((haxe.Log_Anon_62__Fun) (new haxe.Log_Anon_62__Fun()) )) );
 	}
 	
@@ -18,7 +18,7 @@ public class Log extends haxe.lang.HxObject
 	
 	public Log()
 	{
-		//line 29 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 29 "/usr/share/haxe/std/haxe/Log.hx"
 		haxe.Log.__hx_ctor_haxe_Log(this);
 	}
 	
@@ -30,38 +30,38 @@ public class Log extends haxe.lang.HxObject
 	
 	public static java.lang.String formatOutput(java.lang.Object v, java.lang.Object infos)
 	{
-		//line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 34 "/usr/share/haxe/std/haxe/Log.hx"
 		java.lang.String str = haxe.root.Std.string(v);
-		//line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 35 "/usr/share/haxe/std/haxe/Log.hx"
 		if (( infos == null )) 
 		{
-			//line 36 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+			//line 36 "/usr/share/haxe/std/haxe/Log.hx"
 			return str;
 		}
 		
-		//line 37 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 37 "/usr/share/haxe/std/haxe/Log.hx"
 		java.lang.String pstr = ( ( haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(infos, "fileName", true)) + ":" ) + ((int) (haxe.lang.Runtime.getField_f(infos, "lineNumber", true)) ) );
-		//line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 38 "/usr/share/haxe/std/haxe/Log.hx"
 		if (( ((haxe.root.Array) (haxe.lang.Runtime.getField(infos, "customParams", true)) ) != null )) 
 		{
-			//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+			//line 39 "/usr/share/haxe/std/haxe/Log.hx"
 			int _g = 0;
-			//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+			//line 39 "/usr/share/haxe/std/haxe/Log.hx"
 			haxe.root.Array _g1 = ((haxe.root.Array) (haxe.lang.Runtime.getField(infos, "customParams", true)) );
-			//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+			//line 39 "/usr/share/haxe/std/haxe/Log.hx"
 			while (( _g < _g1.length ))
 			{
-				//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+				//line 39 "/usr/share/haxe/std/haxe/Log.hx"
 				java.lang.Object v1 = _g1.__get(_g);
-				//line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+				//line 39 "/usr/share/haxe/std/haxe/Log.hx"
 				 ++ _g;
-				//line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+				//line 40 "/usr/share/haxe/std/haxe/Log.hx"
 				str += ( ", " + haxe.root.Std.string(v1) );
 			}
 			
 		}
 		
-		//line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Log.hx"
+		//line 41 "/usr/share/haxe/std/haxe/Log.hx"
 		return ( ( pstr + ": " ) + str );
 	}
 	

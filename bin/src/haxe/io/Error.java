@@ -7,7 +7,7 @@ public class Error extends haxe.lang.ParamEnum
 {
 	public Error(int index, java.lang.Object[] params)
 	{
-		//line 240 "C:\\HaxeToolkit\\haxe\\std\\java\\internal\\HxObject.hx"
+		//line 240 "/usr/share/haxe/std/java/internal/HxObject.hx"
 		super(index, params);
 	}
 	
@@ -22,14 +22,14 @@ public class Error extends haxe.lang.ParamEnum
 	
 	public static haxe.io.Error Custom(java.lang.Object e)
 	{
-		//line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
+		//line 42 "/usr/share/haxe/std/haxe/io/Error.hx"
 		return new haxe.io.Error(3, new java.lang.Object[]{e});
 	}
 	
 	
 	@Override public java.lang.String getTag()
 	{
-		//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
+		//line 31 "/usr/share/haxe/std/haxe/io/Error.hx"
 		return haxe.io.Error.__hx_constructs[this.index];
 	}
 	

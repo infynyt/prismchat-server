@@ -7,7 +7,7 @@ public class Main_main_17__Fun extends haxe.lang.Function
 {
 	public Main_main_17__Fun()
 	{
-		//line 17 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 17 "/opt/hosting/prismchat-1/src/Main.hx"
 		super(1, 0);
 	}
 	
@@ -16,90 +16,90 @@ public class Main_main_17__Fun extends haxe.lang.Function
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 17 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 17 "/opt/hosting/prismchat-1/src/Main.hx"
 		hx_webserver.HTTPRequest d = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((hx_webserver.HTTPRequest) (((java.lang.Object) (__fn_float1) )) )) : (((hx_webserver.HTTPRequest) (__fn_dyn1) )) );
-		//line 18 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 18 "/opt/hosting/prismchat-1/src/Main.hx"
 		java.lang.Object data = new haxe.format.JsonParser(haxe.lang.Runtime.toString(haxe.crypto.Base64.decode(haxe.lang.StringExt.substring(d.postData, 2, d.postData.length()), null).toString())).doParse();
-		//line 19 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 19 "/opt/hosting/prismchat-1/src/Main.hx"
 		{
-			//line 19 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+			//line 19 "/opt/hosting/prismchat-1/src/Main.hx"
 			java.lang.String __temp_svar3 = (haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(data, "request", true)));
-			//line 19 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+			//line 19 "/opt/hosting/prismchat-1/src/Main.hx"
 			if (( __temp_svar3 != null )) 
 			{
-				//line 19 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+				//line 19 "/opt/hosting/prismchat-1/src/Main.hx"
 				switch (__temp_svar3.hashCode())
 				{
 					case 103149417:
 					{
-						//line 20 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+						//line 20 "/opt/hosting/prismchat-1/src/Main.hx"
 						if (__temp_svar3.equals("login")) 
 						{
-							//line 21 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+							//line 21 "/opt/hosting/prismchat-1/src/Main.hx"
 							java.lang.String username = "";
-							//line 22 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+							//line 22 "/opt/hosting/prismchat-1/src/Main.hx"
 							java.lang.String password = "";
-							//line 24 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+							//line 24 "/opt/hosting/prismchat-1/src/Main.hx"
 							{
-								//line 24 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+								//line 24 "/opt/hosting/prismchat-1/src/Main.hx"
 								int _g = 0;
-								//line 24 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+								//line 24 "/opt/hosting/prismchat-1/src/Main.hx"
 								int _g1 = ((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(data, "parameters", true)) ).length;
-								//line 24 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+								//line 24 "/opt/hosting/prismchat-1/src/Main.hx"
 								while (( _g < _g1 ))
 								{
-									//line 24 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+									//line 24 "/opt/hosting/prismchat-1/src/Main.hx"
 									int i = _g++;
-									//line 25 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+									//line 25 "/opt/hosting/prismchat-1/src/Main.hx"
 									{
-										//line 25 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+										//line 25 "/opt/hosting/prismchat-1/src/Main.hx"
 										java.lang.String __temp_svar1 = (haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(data, "parameters", true)) ).__get(i), "key", true)));
-										//line 25 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+										//line 25 "/opt/hosting/prismchat-1/src/Main.hx"
 										if (( __temp_svar1 != null )) 
 										{
-											//line 25 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+											//line 25 "/opt/hosting/prismchat-1/src/Main.hx"
 											switch (__temp_svar1.hashCode())
 											{
 												case 1216985755:
 												{
-													//line 30 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 30 "/opt/hosting/prismchat-1/src/Main.hx"
 													if (__temp_svar1.equals("password")) 
 													{
-														//line 31 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+														//line 31 "/opt/hosting/prismchat-1/src/Main.hx"
 														haxe.root.Sys.stderr().writeString("Client used unhashed password; rejected request\r\n", null);
-														//line 32 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+														//line 32 "/opt/hosting/prismchat-1/src/Main.hx"
 														d.reply("DANGER: DO NOT USE UNHASHED PASSWORDS!", 400);
 													}
 													
-													//line 30 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 30 "/opt/hosting/prismchat-1/src/Main.hx"
 													break;
 												}
 												
 												
 												case -265713450:
 												{
-													//line 27 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 27 "/opt/hosting/prismchat-1/src/Main.hx"
 													if (__temp_svar1.equals("username")) 
 													{
-														//line 27 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+														//line 27 "/opt/hosting/prismchat-1/src/Main.hx"
 														username = haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(data, "parameters", true)) ).__get(i), "value", true));
 													}
 													
-													//line 27 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 27 "/opt/hosting/prismchat-1/src/Main.hx"
 													break;
 												}
 												
 												
 												case 566700617:
 												{
-													//line 29 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 29 "/opt/hosting/prismchat-1/src/Main.hx"
 													if (__temp_svar1.equals("passwordHash")) 
 													{
-														//line 29 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+														//line 29 "/opt/hosting/prismchat-1/src/Main.hx"
 														password = haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(data, "parameters", true)) ).__get(i), "value", true));
 													}
 													
-													//line 29 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+													//line 29 "/opt/hosting/prismchat-1/src/Main.hx"
 													break;
 												}
 												
@@ -116,7 +116,7 @@ public class Main_main_17__Fun extends haxe.lang.Function
 							
 						}
 						
-						//line 20 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+						//line 20 "/opt/hosting/prismchat-1/src/Main.hx"
 						break;
 					}
 					
@@ -127,9 +127,9 @@ public class Main_main_17__Fun extends haxe.lang.Function
 			
 		}
 		
-		//line 37 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 37 "/opt/hosting/prismchat-1/src/Main.hx"
 		d.close();
-		//line 17 "C:\\Users\\saytl\\Documents\\Code\\prismchat\\src\\Main.hx"
+		//line 17 "/opt/hosting/prismchat-1/src/Main.hx"
 		return null;
 	}
 	
